@@ -1,1 +1,14 @@
-
+pipeline {
+    agent any
+    tools {
+      maven 'mymaven'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
+0 comments on commit eb75bec
